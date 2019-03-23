@@ -1,0 +1,7 @@
+{
+  "name": "AppNews",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
