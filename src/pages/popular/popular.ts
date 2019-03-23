@@ -22,9 +22,9 @@ export class PopularPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http) {   //เพิ่ม public http:Http เพื่อจะเรียกดูข้อมูลจากภายนอก
       this.http.get('https://www.reddit.com/r/popular/new.json?limit=20') //เรียกแสดงข้อมูลจาก url
-      .map(res=>res.json()) 
-      .subscribe(data=>{
-        this.popnews = data.data.children; //ผลลัพธ์จาก get จะนำมาใส่ตัวแปร popnews
+      .map(res=>res.json()) //ได้ขอมูลแล้วมาเก็บไว้ในรูปแบบ json
+      .subscribe(data=>{   
+        this.popnews = data.data.children; //data ตัวแรกคือ subscribe data ตัวที่ 2 คือโครงสร้างข้อมูลที่ในJSON API ส่วน children จะเป็นโครงสร้างที่อยู่ใน data อีกทีเพื่อดึงข้อมูลมา และนำผลลัพธ์จาก get จะนำมาใส่ตัวแปร popnews
       });
   }
 
