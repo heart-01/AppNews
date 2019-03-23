@@ -12,6 +12,7 @@ import { DetailPage } from '../pages/detail/detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http' ; // import HttpModule เพื่อให้สามารถดึงข้อมูลจากแหล่งภายนอกได้
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule, //เพิ่ม import
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
