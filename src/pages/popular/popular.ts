@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http'; //import เพื่อให้แอปเรียกใช้งานข้อมูลจากภายนอกเพจได้
 import 'rxjs/add/operator/map'; //import เพื่อให้แอปเรียกใช้งานข้อมูลจากภายนอกเพจได้
 
+import{ DetailPage } from '../detail/detail'; //import DetailPage เพื่อลิงก์ไปหน้าอื่น
+
 /**
  * Generated class for the PopularPage page.
  *
@@ -30,6 +32,10 @@ export class PopularPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PopularPage');
+  }
+
+  viewDetail(item){
+    this.navCtrl.push(DetailPage,{data_detail:item}); //เปิดหน้า DetailPage แล้วส่ง data_detail ไปด้วย
   }
 
 }

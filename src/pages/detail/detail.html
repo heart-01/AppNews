@@ -12,4 +12,15 @@
 
 <ion-content padding>
 
+  <img src="{{details.thumbnail}}" alt="No" style="width:100%;" > 
+  <ion-card>
+    <ion-card-header>
+      {{details.title}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Author: {{details.author}}</p>
+      <a href="{{details.url}}" target="_blank" ion-button block >Read More</a>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

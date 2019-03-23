@@ -15,7 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailPage {
 
+  details:any=0; // ตั้งค่าตัวแปร details ชนิด any ที่ต้อง set ค่า 0 เพื่อเวลาเปิดหน้านี้โดยที่ไม่ได้ส่งค่ามาจะได้มีค่า default
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+    this.details=navParams.get('data_detail') //นำข้อมูลตัวแปร data_detail ที่ส่งเข้ามาไว้ในตัวแปร details
+  
   }
 
   ionViewDidLoad() {
