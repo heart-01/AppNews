@@ -6,10 +6,21 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>science</ion-title>
+    <ion-title>Science News</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+    <ion-list>
+        <ion-item *ngFor="let i of science_news" >
+          <ion-thumbnail item-start>
+            <img [src]="i.data.thumbnail" >
+          </ion-thumbnail>
+          <h2>{{i.data.title}}</h2> <!-- ดึงค่าจากตัวแปร i ที่ loop มา แล้วดึงค่าต่างๆจาก json data คือ คีย์ที่ออยู่ใน json  -->
+          <p>{{i.data.author}}</p>
+          <button ion-button clear item-end >View</button>
+        </ion-item>
+      </ion-list>
+    
 </ion-content>
