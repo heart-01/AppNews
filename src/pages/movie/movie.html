@@ -19,7 +19,7 @@
           </ion-thumbnail>
           <h2>{{i.data.title}}</h2> <!-- ดึงค่าจากตัวแปร i ที่ loop มา แล้วดึงค่าต่างๆจาก json data คือ คีย์ที่ออยู่ใน json  -->
           <p>{{i.data.author}}</p>
-          <button ion-button clear item-end >View</button>
+          <button ion-button clear item-end (click)="viewDetail(i.data)" >View</button>
         </ion-item>
       </ion-list>
     
