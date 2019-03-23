@@ -24,7 +24,7 @@ export class PopularPage {
       this.http.get('https://www.reddit.com/r/popular/new.json?limit=20') //เรียกแสดงข้อมูลจาก url
       .map(res=>res.json()) 
       .subscribe(data=>{
-        this.popnews = data.data.children; //ผลลัพจาก get จะนำมาใส่ตัวแปร popnews
+        this.popnews = data.data.children; //ผลลัพธ์จาก get จะนำมาใส่ตัวแปร popnews
       });
   }
 
